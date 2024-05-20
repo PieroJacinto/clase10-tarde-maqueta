@@ -8,22 +8,32 @@
 </head>
 
 <body>
-    <h1>Ingresar</h1>
-    <a href="/">Home</a>
-    <a href="/register">Registrate</a>
-    <form action="/login" method="POST">
-        <p>
-            <input type="text" name="email" value="" placeholder="email">
-        </p>
-        <p>
-            <input type="password" name="password" value="" placeholder="contraseña">
-        </p>
-        <p>
-            <input type="checkbox" name="rememberme" value="ok">
-            Recordame
-        </p>
-        <button type="submit"> Ingresar </button>
-    </form>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Ingresar</h1>
+        <div class="d-flex justify-content-center mb-3">
+            <a href="/" class="btn btn-link">Home</a>
+            <a href="/register" class="btn btn-link">Registrate</a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/login" method="POST" class="border p-4 shadow-sm rounded">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="contraseña">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme" value="ok">
+                        <label class="form-check-label" for="rememberme">Recordame</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
