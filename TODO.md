@@ -2,14 +2,14 @@
 
 ## 1
 
-instalar session  y usarlo en app.js
+instalar session  y usarlo en app.js OK
 
 ## 2
 
-dejar disponibles los datos de la session para todas las vistas en app.js
+dejar disponibles los datos de la session para todas las vistas en app.js OK
 
 ## 3 
-crear el register en registerController
+crear el register en registerController OK
 
 ## 4 
 proceso de login con session
