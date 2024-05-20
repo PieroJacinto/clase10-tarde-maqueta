@@ -12,7 +12,7 @@ dejar disponibles los datos de la session para todas las vistas en app.js OK
 crear el register en registerController OK
 
 ## 4 
-proceso de login con session
+proceso de login con session OK
 
 ## 5
 en index agregar nombre de usuario, y mostrar boton de logut y ocultar iniciar session si esta logueado.

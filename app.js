@@ -41,7 +41,21 @@ app.use(function (req, res, next) {
   return next();
 });
 
-// Antes de las rutas. Dejar disponible datos de sessión para todas las vistas
+
+// Antes de las rutas. Dejar disponible datos de sessión y cookies para todas las vistas
+
+app.use(function(req, res, next){
+  if(req.session.user === undefined && req.cookies.userId !== undefined){
+    let cookieId = req.cookies.userId;
+    db.User.findByPk(cookieId).then(function(user){
+      req.session.user = user;
+      res.locals.user = req.session.user;     
+    }).catch(function(err){
+      console.log(err)
+    })
+  }
+  return next();
+})
 
 app.use("/", indexRouter);
 app.use("/movies", moviesRouter);
